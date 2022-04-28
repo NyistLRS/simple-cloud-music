@@ -1,0 +1,123 @@
+/**index.wxss**/
+.clond-header {
+  display: flex;
+  height: 36px;
+  line-height: 36px;
+  .user-info {
+    width: 50px;
+    text-align: center;
+  }
+  .search {
+    flex: 1;
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  }
+  .playing {
+    width: 50px;
+    text-align: center;
+  }
+}
+.clond-swiper-wrap {
+  height: 150px;
+  width: 100%;
+}
+.swiper-item {
+  width: 100%;
+  height: 100%;
+  background-color:aquamarine;
+  .item-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.swiper-item:first-child {
+  background-color:blueviolet;
+}
+.swiper-item:last-child {
+  background-color: beige;
+}
+.cloud-recommend-list {
+  background-color: #eeeeee;
+  padding: 5px 10px;
+  
+  .scroll-view_H{
+    white-space: nowrap;
+  }
+  .cloud-recommend-list-item {
+    display: inline-block;
+    background-color: #ffffff;
+    // margin-right: 5px;
+    padding: 5px;
+    width: 25%;
+    height: 80px;
+    .item-img {
+      width: 100%;
+      height: 100%;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+.cloud-ranking-wrap {
+  .music-item{
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .music-item:nth-of-type(even){ 
+    background:#eeeeee;
+  }
+}
+.clond-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #eeeeee;
+  .player-contanier {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #ffffff;
+    .player-bg {
+      width: 80px;
+      background-color: #ffffff;
+      .player-bg-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .player-control {
+      flex: 1;
+      padding: 5px 10px;
+      display: flex;
+      flex-direction: column;
+      .player-control-btn {
+        flex: 1;
+      }
+      .player-control-bottom {
+        display: flex;
+        height: 20px;
+        line-height: 20px;
+        .player-control-progress {
+          flex: 1;
+          margin: 0;
+        }
+        .player-control-time {
+          width: 100px;
+          padding: 0 8px;
+        }
+        .player-control-voice {
+          width: 30px;
+          background-color:azure;
+        }
+      }
+      
+    }
+  }
+}

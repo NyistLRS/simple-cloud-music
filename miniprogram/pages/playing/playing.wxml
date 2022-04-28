@@ -1,0 +1,6 @@
+<!--pages/playing/playing.wxml-->
+<view>
+  <view class="controls">
+    <input class="weui-input"  bindinput="bindHideKeyboard" placeholder="搜喜欢的歌曲或歌手" />
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<!--首页-->
+<view class="cloud-container">
+  <view class="clond-header">
+    <view class="user-info">信息</view>
+    <view class="search">
+      <input class="weui-input"  bindinput="bindHideKeyboard" bindtap="bindDumpSearch" placeholder="搜喜欢的歌曲或歌手" />
+    </view>
+    <view class="playing">播放</view>
+  </view>
+  <view class="clond-swiper-wrap">
+    <swiper  autoplay="{{autoplay}}" duration="{{duration}}" indicator-dots="indicatorDots" circular="true">
+      <block wx:for="{{swipData}}" wx:key="index">
+        <swiper-item>
+          <view class="swiper-item">
+            <!-- <image src="{{item.pic}}" class="item-img"/> -->
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view>推荐歌单</view>
+  <view class="cloud-recommend-list">
+    <scroll-view scroll-x="true" style="width: 100%" bindscroll="scroll" class="scroll-view_H">
+      <block wx:for="{{personalizedList}}" wx:key="index" >
+        <view class="cloud-recommend-list-item">
+          <!-- <image src="{{item.picUrl}}" class="item-img"/> -->
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="cloud-ranking-wrap">
+    <block wx:for="{{playlistDetailList}}" wx:key="index">
+      <view class="music-item" bindtap="dumpPlay" data-detail="{{item}}">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="clond-player">
+    <view class="player-contanier">
+      <view class="player-bg" bindtap="palyAction">
+        <image src="{{playingBgUrl}}" class="player-bg-image"></image>
+      </view>
+      <view class="player-control">
+        <view class="player-control-btn"></view>
+        <view class="player-control-bottom">
+          <!-- <progress percent="{{percent}}" class="player-control-progress" backgroundColor="#aaa" activeColor="rgb(80, 93, 107)" border-radius="5" stroke-width="3"></progress> -->
+          <slider class="player-control-progress" backgroundColor="#aaa"  activeColor="rgb(80, 93, 107)" block-size="6" value="{{percent}}" bindchange="dragProgress"></slider>
+          <view class="player-control-time">{{currentDuration}}/{{duration}}</view>
+          <view class="player-control-voice"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

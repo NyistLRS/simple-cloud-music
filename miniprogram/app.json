@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/playing/playing",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#07c160",
+    "navigationBarTitleText": "云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,49 @@
+/* pages/search/search.wxss */
+.search-pages {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .search-bar {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 12px;
+    .weui-input {
+      height: 100%;
+    }
+  }
+  .search-contanier {
+    flex: 1;
+    padding: 0 10px;
+    .tip {
+      height: 20px;
+      font-size: 12px;
+      .clear {
+        float: right;
+      }
+    }
+    .history-text-contanier {
+      padding-top: 10px;
+      .history-text {
+        font-size: 12px;
+        padding: 1px 8px;
+        border-radius: 10px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        color:#aaaaaa;
+        background-color:#eeeeee;
+      }
+    }
+    .search-list {
+      .search-list-item{
+        border-bottom: 1px solid #eeeeee;
+        padding: 5px 0;
+        .search-list-item-text{
+          font-size: 12px;
+        }
+      }
+      .playing {
+        background-color: #eeeeee;
+      }
+    }
+  }
+}

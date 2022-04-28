@@ -1,0 +1,33 @@
+<!--pages/search/search.wxml-->
+<wxs module="utils">
+var getAuthorName = function(names){
+    console.log(names)
+    return names.map(function(item){
+      return item.name
+    }).join('/')
+  }
+  module.exports = {
+    getAuthorName:getAuthorName
+  }
+</wxs>
+<view class="search-pages">
+  <view class="search-bar">
+    <input type="text" class="weui-input"  bindconfirm="confirm" confirm-type="search" placeholder="搜喜欢的歌曲或歌手" />
+  </view>
+  <view class="search-contanier">
+    <view class="tip" wx:if="{{!searchList.length}}">
+      <text>搜索记录</text>
+      <text class="clear" bindtap="clearHistory">清空</text>
+    </view>
+    <view class="history-text-contanier" wx:if="{{!searchList.length}}">
+      <text wx:for="{{history}}" wx:key="index" class="history-text">{{item}}</text>
+    </view>
+    <view class="search-list" wx:if="{{searchList.length}}">
+      <block wx:for="{{searchList}}" wx:key="index">
+        <view class="search-list-item" bindtap="play" data-id="{{item.id}}">
+          <text class="search-list-item-text">{{item.name}}-{{utils.getAuthorName(item.artists)}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
